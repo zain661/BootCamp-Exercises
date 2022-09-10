@@ -1,12 +1,12 @@
-function zainAssaf(str){
+function zainAssaf(str){  // “aabbccdee” will return “d”
     const set = new Set()
     const set2 = new Set()
      for(let i of str){
         if(set.has(i)){
-            set2.add(i)
+            set2.add(i) //abcde
         }
         else{
-            set.add(i)
+            set.add(i) //abce
         }
      } 
 

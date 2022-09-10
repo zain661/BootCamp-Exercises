@@ -28,13 +28,14 @@ function encrypt(str) {
     "Z",
   ];
 
-  let word = "",
-    index1 = 0;
+  let word = ""
+   let index1 
   for (let i in str) {
-    index1 = str.indexOf(str[i]);
-    word[i] = letters[index1 + 1];
+    console.log(str[i]);
+    index1 = letters.indexOf(str[i]);
+    word += letters[index1 + 1];
   }
   console.log(word);
 }
 
-encrypt("cat");
+encrypt("CAT");

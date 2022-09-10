@@ -57,11 +57,34 @@
 // str = str.charAt(0).toUpperCase() + str.slice(1);
 // console.log(str)
 
-function LongestSubstring(str){
-        for(let i in str){
-            if(str[i] == str[i+1]){
+// function LongestSubstring(str){
+//         for(let i in str){
+//             if(str[i] == str[i+1]){
 
-            }
+//             }
             
-        }
-}
+//         }
+// }
+// "hgjhgj".camelCase()
+// "hello world".camelCase() => helloCase
+// " " => null
+// "helloCase" => this
+// "hell 5+" => null
+String.prototype.camelCase = function() {
+    if(this === ""){
+        return null
+    }
+    if(this.indexOf(' ') < 0 ){
+        return this
+    }
+    
+ const str = this.split(" ")
+    let result = str[0]
+    for (let i = 1; i < str.length; i++) {
+      result +=  str[i][0].toUpperCase() + str[i].slice(1)
+    }
+   return  result
+};
+str = "hello world"
+str = str.camelCase()
+console.log(str);
